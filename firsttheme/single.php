@@ -4,6 +4,7 @@ get_header();
 <!-- BLOG PAGE -->
 <main>
 
+
     <div id="wrapper">
         <!-- IF WE HAVE POSTS....SHOW ME THE POST.... 
     IF NOT......
@@ -22,26 +23,12 @@ WWE DONT NOT SHOW POSTS!-->
 
 </div>
 <!-- closes meta div -->
-<div class="thumbnail">
-    
-<?php if(has_post_thumbnail()); ?>
-<a href="<?php the_permalink(); ?>">
-<?php the_post_thumbnail(); ?></a>
 
-
-<?php endif();  ?>
-
-</div>
-<!-- closes thumbnail div -->
-<?php  the_excerpt() ; ?>
-<span class="block">
-    <a href="<?php the_permalink(); ?>">Read More</a>
-    
-</span>
+<?php  the_content() ; ?> 
 
 <?php endwhile;  ?>
-</article>
-
+</div>
+<!-- closes aticle  -->
 
 <?php else : ?>
 
