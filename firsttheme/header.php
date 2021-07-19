@@ -3,10 +3,12 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ) ;?>">
 <title><?php bloginfo( 'name' ); ?></title>
-<link href="<?php bloginfo( 'stylesheet_url' ); ?>" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( 'stylesheet_url' ); ?>" 
+rel="stylesheet" type="text/css">
 <?php wp_head();  ?>
 </head>
 
-<body>
+
+<body <?php body_class(); ?>>
     <header>
     </header>

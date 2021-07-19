@@ -1,60 +1,68 @@
-<?php 
+<?php
 get_header();
+
 ?>
-<!-- BLOG PAGE -->
-<main>
 
-    <div id="wrapper">
-        <!-- IF WE HAVE POSTS....SHOW ME THE POST.... 
-    IF NOT......
-WWE DONT NOT SHOW POSTS!-->
 
-<?php if(have_posts()) : ?>
+<!-- THIS IS OLGO's page. It is known as "news" in WP. Mine blog page was broken and we could not fix it. This has future code from videos. Watch videos to ensure that style and nav is right -->
+<!-- <div id="hero">
+     <img src="<?php echo get_template_directory_uri();?>/../../uploads/yellowstone-inner.jpg" alt="banner">
+    </div> -->
+    <!-- commented out end hero -->
+<div class="wrapper">
 
-<?php while(have_posts()) : the_post() ; ?>
-<artical class="post">
-
-<h2><a href="<?php the_permalink() ;?>"><?php the_title() ;?></a></h2>
-
-<div class="meta">
-    <span><b>Posted By:</b> <?php the_author() ;?></span>
-    <span><b>Posted On:</b> <?php the_time('F j, Y g:i a'); ?></span>
-
-</div>
-<!-- closes meta div -->
 <div class="thumbnail">
-    
-<?php if(has_post_thumbnail()); ?>
+
+<?php if(has_post_thumbnail()) : ?>
 <a href="<?php the_permalink(); ?>">
 <?php the_post_thumbnail(); ?></a>
-
-
-<?php endif();  ?>
-
+<?php endif;  ?>
 </div>
-<!-- closes thumbnail div -->
-<?php  the_excerpt() ; ?>
-<span class="block">
-    <a href="<?php the_permalink(); ?>">Read More</a>
-    
-</span>
+<!-- end thumbnail -->
+<main>
+<!-- if we have posts...
+show me the post!!!
+If not...
+we do not have posts! -->
+<?php if(have_posts()) : ?>
+<?php while(have_posts()) : the_post() ; ?>
 
-<?php endwhile;  ?>
+
+<article class="posts">
+<h1> <a href="<?php the_permalink() ;?>"><?php the_title() ;?></a></h1>
+
+<div class="meta">
+
+<span><b>Posted By:</b> <?php the_author()  ;?></span>
+<span><b>Posted On:</b> <?php the_time('F j, Y g:i a')  ;?></span>
+</div>
+<!-- end meta div -->
+
+
+<?php the_excerpt() ;  ?>
+
+<span class="block"><a href="<?php the_permalink();  ?>">Read More about <?php the_title(); ?>
+</a></span>
+
 </article>
+<?php endwhile; ?>
 
-
-<?php else : ?>
-
-
-<?php echo wp_autop('Sorry, no posts were found!'); ?>
-
+<!-- below is code that had not done yet, this came from Olga's code -->
+<?php 
+echo '<h2>Search Results:</h2>
+<p>Sorry, but nothing matched your search terms.  <br>
+Would you like to search again with different keywords?</p>';
+?>
+<?php get_search_form(); ?>
 <?php endif; ?>
+<!-- PLEASE REMEMBER, the search results originally is working off the index.php page -->
 </main>
 
-<aside>
-</aside>
-</div>
-<!-- END DIV/WRAPPER -->
+<?php get_sidebar(); ?>
 
-<? get_footer(); 
+</div>
+<!-- end wrapper -->
+<?php 
+get_footer();
+
 ?>

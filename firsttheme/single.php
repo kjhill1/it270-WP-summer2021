@@ -4,7 +4,6 @@ get_header();
 <!-- BLOG PAGE -->
 <main>
 
-
     <div id="wrapper">
         <!-- IF WE HAVE POSTS....SHOW ME THE POST.... 
     IF NOT......
@@ -24,6 +23,16 @@ WWE DONT NOT SHOW POSTS!-->
 </div>
 <!-- closes meta div -->
 
+<div class="thumbnail">
+
+<?php if(has_post_thumbnail()) : ?>
+<a href="<?php the_permalink(); ?>">
+<?php the_post_thumbnail(); ?></a>
+<?php endif;  ?>
+</div>
+<!-- end thumbnail -->
+
+
 <?php  the_content() ; ?> 
 
 <?php endwhile;  ?>
@@ -40,6 +49,8 @@ WWE DONT NOT SHOW POSTS!-->
 
 <aside>
 </aside>
+
+
 </div>
 <!-- END DIV/WRAPPER -->
 
