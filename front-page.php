@@ -28,6 +28,15 @@ WWE DONT NOT SHOW POSTS!-->
 
 <?php endif; ?>
 
+<div class="thumbnail">
+
+<?php if(has_post_thumbnail()) : ?>
+<a href="<?php the_permalink(); ?>">
+<?php the_post_thumbnail(); ?></a>
+<?php endif;  ?>
+</div>
+<!-- end thumbnail -->
+
 
 
 </div>

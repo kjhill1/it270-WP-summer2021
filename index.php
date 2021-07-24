@@ -24,7 +24,7 @@ we do not have posts! -->
     <span><b>Posted On:</b> <?php the_time('F j, Y g:i a')  ;?></span>
     </div>
     </article> <!-- ???? article or c??? -->
-<!-- end meta div -->
+<!-- end meta -->
 
 <div class="thumbnail">
 
@@ -56,7 +56,7 @@ we do not have posts! -->
 
 </aside>
 </div>
-<!-- END WRAPPER div -->
+<!-- END WRAPPER -->
 
 <?php 
 get_footer();
