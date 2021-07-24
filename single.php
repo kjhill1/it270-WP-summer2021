@@ -26,20 +26,7 @@ we do not have posts! -->
     </article> <!-- ???? article or c??? -->
 <!-- end meta div -->
 
-<div class="thumbnail">
-
-<?php if(has_post_thumbnail()) : ?>
-<a href="<?php the_permalink(); ?>">
-<?php the_post_thumbnail(); ?></a>
-<?php endif;  ?>
-</div>
-<!-- end thumbnail -->
-
-<?php the_excerpt() ;  ?>
-<span class="block">
-<a href="<?php the_permalink();  ?>">Read More about <?php the_title(); ?>
-</a>
-</span>
+<?php the_content() ;  ?>
 
 <?php endwhile; ?>
 
@@ -57,6 +44,11 @@ we do not have posts! -->
 </aside>
 </div>
 <!-- END WRAPPER div -->
+
+<!-- <span class="block">
+<a href="<?php the_permalink();  ?>">Read More about <?php the_title(); ?>
+</a>
+</span> -->
 
 <?php 
 get_footer();
