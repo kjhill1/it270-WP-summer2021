@@ -17,7 +17,7 @@ we do not have posts! -->
 
 <article class="posts">
 
-<h2><a href="<?php the_permalink() ;?>"><?php the_title()  ;?></a></h2>
+<h1><a href="<?php the_permalink() ;?>"><?php the_title()  ;?></a></h1>
 
 <div class="meta">
     <span><b>Posted By:</b> <?php the_author()  ;?></span>
@@ -37,7 +37,7 @@ we do not have posts! -->
 
 <?php the_excerpt() ;  ?>
 <span class="block">
-<a href="<?php the_permalink();  ?>">Read More about <?php the_title(); ?>
+<a href="<?php the_permalink();  ?>">Read More About <?php the_title(); ?>
 </a>
 </span>
 

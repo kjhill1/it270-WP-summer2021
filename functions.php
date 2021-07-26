@@ -11,6 +11,7 @@ set_post_thumbnail_size(150, 150);
 
 add_theme_support('post-thumbnails') ;
 
+
 //Page Slug Body Class
 function add_slug_body_class( $classes ) {
     global $post;

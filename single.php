@@ -25,7 +25,7 @@ we do not have posts! -->
 
 <article class="posts">
 
-<h2><a href="<?php the_permalink() ;?>"><?php the_title()  ;?></a></h2>
+<h1><?php the_title() ;?></h1>
 
 <div class="meta">
     <span><b>Posted By:</b> <?php the_author()  ;?></span>
@@ -45,6 +45,9 @@ we do not have posts! -->
 <?php echo wp_autop('Sorry, No Post have been found'); ?>
 
 <?php endif; ?>
+
+<?php comments_template(); ?>
+
 </main>
 
 <aside>
