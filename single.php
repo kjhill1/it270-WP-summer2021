@@ -7,6 +7,14 @@ get_header();
 <!-- THIS IS OLGO's page. It is known as "news" in WP. Mine blog page was broken and we could not fix it. This has future code from videos. Watch videos to ensure that style and nav is right -->
 
 <div id="wrapper">
+<!-- <div class="thumbnail">
+
+<?php if(has_post_thumbnail()) : ?>
+<a href="<?php the_permalink(); ?>">
+<?php the_post_thumbnail(); ?></a>
+<?php endif;  ?>
+</div> -->
+<!-- end thumbnail -->
 <main>
 <!-- if we have posts...
 show me the post!!!
