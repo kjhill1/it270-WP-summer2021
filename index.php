@@ -2,9 +2,6 @@
 get_header();
 
 ?>
- <!-- this is mine after olga -->
-
-<!-- THIS IS OLGO's page. It is known as "news" in WP. Mine blog page was broken and we could not fix it. This has future code from videos. Watch videos to ensure that style and nav is right -->
 
 <div id="wrapper">
 <main>
@@ -23,7 +20,7 @@ we do not have posts! -->
     <span><b>Posted By:</b> <?php the_author()  ;?></span>
     <span><b>Posted On:</b> <?php the_time('F j, Y g:i a')  ;?></span>
     </div>
-    </article> <!-- ???? article or c??? -->
+    
 <!-- end meta -->
 
 <div class="thumbnail">
@@ -40,6 +37,7 @@ we do not have posts! -->
 <a href="<?php the_permalink();  ?>">Read More About <?php the_title(); ?>
 </a>
 </span>
+</article> 
 
 <?php endwhile; ?>
 
@@ -47,13 +45,18 @@ we do not have posts! -->
 <?php else : ?>
 
 
-<?php echo wp_autop('Sorry, No Post have been found'); ?>
+<?php echo '<h2>Search Results: </h2>
+<p>Oh No! Wammy! Nothing Here. <br>
+Would you like to search again with different keywords?</p>';
+    ?>
+
+<?php get_search_form(); ?>
 
 <?php endif; ?>
 </main>
 
 <aside>
-
+this is index
 </aside>
 </div>
 <!-- END WRAPPER -->

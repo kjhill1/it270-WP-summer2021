@@ -8,20 +8,19 @@ get_header();
 ?>
 
     <div id="wrapper">
-        <!-- IF WE HAVE POSTS....SHOW ME THE POST.... 
-    IF NOT......
-WWE DONT NOT SHOW POSTS!-->
+  
 
-<div class="thumbnail">
+<!-- <div class="thumbnail"> -->
 
 <?php if(has_post_thumbnail()) : ?>
-<a href="<?php the_permalink(); ?>">
-<?php the_post_thumbnail(); ?></a>
+<!-- <a href="<?php the_permalink(); ?>"> -->
+<?php the_post_thumbnail(); ?>
+<!-- </a> -->
 <?php endif;  ?>
-</div>
+<!-- </div> -->
 <!-- end thumbnail -->
 
-<?php if(have_posts()) : ?>
+<!-- <?php if(have_posts()) : ?> -->
 
 <?php while(have_posts()) : the_post() ; ?>
 
@@ -30,15 +29,6 @@ WWE DONT NOT SHOW POSTS!-->
 <?php  the_content() ; ?> 
 
 <?php endwhile;  ?>
-
-<?php else : ?>
-
-<?php echo wp_autop('Sorry, no posts were found!'); ?>
-
-<?php endif; ?>
-
-
-
 
 
 </div>
