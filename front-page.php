@@ -1,38 +1,30 @@
-<?php 
+<?php
 get_header();
-
-// Template Name: Front Page will display home page
-
-/* (by defining templ name this will display home page on index will refer to blog.)*/
-
+/* Template Name: Front Page */
 ?>
 
-    <div id="wrapper">
-  
+<div id="hero">
+<img src="https://kellywithwordpress.design/wp-content/uploads/DIscovery-Park-Dusk-e1627761529692.jpg" alt="banner">
+</div>
+<!-- end div hero -->
 
-<!-- <div class="thumbnail"> -->
-
+<div id="wrapper">
 <?php if(has_post_thumbnail()) : ?>
-<!-- <a href="<?php the_permalink(); ?>"> -->
-<?php the_post_thumbnail(); ?>
-<!-- </a> -->
-<?php endif;  ?>
-<!-- </div> -->
-<!-- end thumbnail -->
-
-<!-- <?php if(have_posts()) : ?> -->
+<?php the_post_thumbnail() ; ?>
+<?php endif; ?>
+<!-- if we have posts...
+show me the post!!!
+If not...
+we do not have posts! -->
 
 <?php while(have_posts()) : the_post() ; ?>
 
-<h2> <?php the_title() ;?></h2>
+<?php the_content() ; ?>
 
-<?php  the_content() ; ?> 
-
-<?php endwhile;  ?>
-
+<?php endwhile; ?>
 
 </div>
-<!-- END DIV/WRAPPER -->
+<!-- end div wrapper -->
 
 <? get_footer(); 
 ?>

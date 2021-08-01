@@ -23,37 +23,420 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 body {
-    background: rgb(239, 227, 247);
-}
+    background-color: rgb(248, 247, 245);;
+    /* border: solid 10px rgb(44, 41, 48); */
+	padding-top: 50px; 
+	}
 
 header {
-    height: 100px;
-    background-color: rgb(182, 250, 188);
+		/* height: 150px; */
+		/* margin: 9.5px; */
+		/* padding: 20px 20px; */
+		background-color: rgb(255, 202, 133);
+		position: fixed;
+		top: 0;
+		left: 0;	
+		width: 100%
+	}
+
+ 
+.home #hero {
+	background-image:url(https://kellywithwordpress.design/wp-content/uploads/DIscovery-Park-Dusk-e1627761529692.jpg);
+	background-attachment:fixed;
+    background-size:100%;
+    background-position:0 150px;
+    min-height: 600px;
+	max-width: 100%;
+	background-repeat: no-repeat;
+   
+}
+
+.home #hero img {
+    display:none;
+}
+
+.inner-page #hero {
+	background-image:url(https://kellywithwordpress.design/wp-content/uploads/white_sands.jpg);
+	background-attachment:fixed;
+    background-size:100%;
+    background-position:0 150px;
+    min-height: 400px;
+	max-width: 100%;
+	background-repeat: no-repeat;
+}
+
+.inner-page #hero {
+    display:none;
+}
+
+#top {
+	float: right;
+    margin-right: 50px;
+	background-color:rgb(44, 41, 48);
+	height: 60px;
+	line-height: 60px;
+	padding: 0 20px;
+}
+
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    font: rgb(61, 61, 61);
+}
+
+h1 a {
+    color: rgb(17, 16, 16);
+}
+
+h2  {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    color: rgb(173, 102, 35)
+}
+
+h3 {
+    font: 1.5em;
+    color: rgb(17, 16, 16);
+    margin-bottom: 8px;
 }
 
 #wrapper {
-
     max-width: 1100px;
-    margin: 0px auto;
+    margin: 25px;
+    clear: both;
 }
 
 main {
     float: left;
     width: 63%; 
+    /* margin-top: 20px; */
 }
 
 aside {
 
     float: right;
     width: 34%;
-    height: 200px;
-    background: rgb(195, 148, 255);
+    height: 400px;
+    margin-top: 100px;
 }
+
+.inner-header {
+    max-width: 1100px;
+    margin: 0px auto;
+}
+
+#logo {
+    float: left;
+    margin:25px;
+}
+
+
+.menu-my-primary-menu-container {
+    float: right;
+    margin: 25px 20px 0 0;
+}
+
+.main-navigation li {
+    float: left;
+    list-style-type: none;
+    margin-left: 20px;
+    position: relative;
+    /* this is the parent of the .main-navigation li:hover .sub-menu for declared absolute.  */
+}
+
+.sub-menu {
+    display: none;
+}
+
+.main-navigation li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    /* subtitle will be to left unless tell the parent to be relative here it is.main-navigation li*/
+    top: 17px;
+    left:0;
+    padding: 6px;
+    background-color: antiquewhite;
+}
+
+.main-navigation a {
+    text-decoration: none;
+}
+
+
+.main-navigation li:hover .sub-menu li {
+    margin-left:0;
+	width: 175px;
+}
+
+
+
+#searchform {
+	float: right;
+}
+
+.screen-reader-text {
+	/* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	color: rgb(61, 39, 18) */
+	display: none;
+}
+
+#top input#s 	{
+	height: 30px;
+	font-size: 12px;
+	margin-right: 5px;
+}
+
+#top input#searchsubmit {
+	padding: 4px;
+	background-color: rgb(255, 202, 133);
+}
+
+/* :hover #searchsubmit {
+	background: rgb(251, 251, 142);
+} */
+
+p {
+margin-bottom: 20px;
+
+}
+
+ article span {
+    font-style: italic;
+
+}
+
+.block {
+    display: block;
+}
+
+.email-notes {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#comment {
+    display: block;
+    
+}
+
+/* reply form*/
+
+#respond{
+    border: 2px dotted rgb(44, 41, 48);;
+    color: rgb(44, 41, 48);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-notes + .comment-form-comment {
+        margin: -14px 0 20px 0;
+}
+
+p + .block {
+
+    margin: -10px 0 20px 0;
+    font-style: italic;
+}
+
+a {
+    color: rgb(173, 102, 35);
+}
+
+.meta{
+    margin-bottom: 10px;
+}
+
+.nav-button { 
+	display: none; 
+} /* hide the navigation button by default */
+
+
+@media only screen and (max-width: 1430px) {
+
+	.home #hero {
+		background-image: none;
+		margin-top: 150px;
+		max-width: 100%;
+		min-height: auto;
+	}
+	
+	.home #hero img {
+		display: block;
+	}
+	
+	.inner-page #hero {
+		background-image: none;
+		margin-top: 150px;
+		min-height: auto;
+		max-width: 100%;
+	}
+
+
+.inner-page #hero {
+	display: block;
+
+}
+
+}
+@media only screen and (max-width: 700px) {
+
+	/* Navigation Button
+	-------------------------------------------------------- */
+
+	.nav-button {
+		display: block;
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		width: 50px;
+		height: 35px;
+		background: url('images/menu-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 21px, 100%;
+		cursor: pointer;
+		border: 0 none;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		box-shadow: 0 0 4px rgba(0,0,0,.7) inset;
+		border-radius: 5px;
+		z-index: 999;
+		text-indent: -9999px;
+	}
+	.nav-button:hover {
+		background-color: rgba(0,0,0,.1);
+	}
+	.nav-button.open {
+		background: url('images/close-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 21px, 100%;
+	}
+
+	/* Navigation Bar
+	-------------------------------------------------------- */
+
+	
+
+	.primary-nav {
+		width: 100%;
+		float: none;
+		background-color: #238be3; /* change the menu color */
+		background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		display: block;
+		height: 50px;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		box-shadow: 0 1px 2px rgba(0,0,0,.6);
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 998;
+		clear: both;
+	}
+	.primary-nav li {
+		display: none;
+		width: 100%;
+		font-family: Arial;
+	}
+
+    .main-navigation li {
+        margin-left:0px;
+    }
+
+    .main-navigation li:hover .sub-menu {
+
+        display: block;
+        position: static;
+        /* if not set to static the nav menu's drop (Banksy) with be on top of the "museum" button; */
+        top:0;
+        padding: 0;
+        background-color: none;
+    }
+
+	.primary-nav li a {
+		display: block;
+		width: 90%;
+		padding: 10px 5%;
+		font-size: 14px;
+		font-weight: bold;
+		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
+		color: white;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(0,0,0,.2);
+		border-top: 1px solid rgba(255,255,255,.1);
+	}
+	.primary-nav li a:hover {
+		background-color: rgba(0,0,0,.5);
+		border-top-color: transparent;
+	}
+	.primary-nav > li:first-child {
+		border-top: 1px solid rgba(0,0,0,.2);
+	}
+
+	/* Toggle the navigation bar open  */
+
+	.primary-nav.open {
+		height: auto;
+		padding-top: 50px;
+	}
+	.primary-nav.open li {
+		display: block;
+	}
+
+	/* Submenus – optional .parent class indicates dropdowns */
+
+	.primary-nav > li:hover > a {
+		background: rgba(0,0,0,.5);
+		border-bottom-color: transparent;
+	}
+	.primary-nav li.parent > a:after {
+		content: "▼";
+		color: rgba(255,255,255,.5);
+		float: right;
+	}
+	.primary-nav li.parent > a:hover {
+		background: rgba(0,0,0,.75);
+	}
+	.primary-nav li ul {
+		display: none;
+		background: rgba(0,0,0,.5);
+		border-top: 0 none;
+		padding: 0;
+	}
+	.primary-nav li ul a {
+		border: 0 none;
+		font-size: 12px;
+		padding: 10px 5%;
+		font-weight: normal;
+	}
+	.primary-nav li:hover ul {
+		display: block;
+		border-top: 0 none;
+	}
+
+} /* End Mobile Styles */
+
+.home .size-post-thumbnail  {
+    width: 100%;
+   
+} 
+
+body .attachment-post-thumbnail {
+    width: 30%;
+    
+}
+
+.thumbnail {
+    margin-bottom: 10px;
+}
+
 
 footer {
     clear: both;
     height: 200px;
     background: rgb(253, 217, 169);
+    background-color: rgb(255, 202, 133);
 }
 
 .copyright {
@@ -73,28 +456,5 @@ footer {
     margin-right: 30px;
     list-style: none;
     /* added to remove bullet */
-}
-
-p {
-margin-bottom: 20px;
-
-}
-
-
- article span {
-    font-style: italic;
-
-}
-
-.block {
-    display: block;
-
-
-}
-
-p + .block {
-
-    margin: -10px 0 20px 0;
-    font-style: italic;
 }
 

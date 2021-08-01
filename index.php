@@ -26,8 +26,8 @@ we do not have posts! -->
 <div class="thumbnail">
 
 <?php if(has_post_thumbnail()) : ?>
-<a href="<?php the_permalink(); ?>">
-<?php the_post_thumbnail(); ?></a>
+
+<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 <?php endif;  ?>
 </div>
 <!-- end thumbnail -->
@@ -48,16 +48,15 @@ we do not have posts! -->
 <?php echo '<h2>Search Results: </h2>
 <p>Oh No! Wammy! Nothing Here. <br>
 Would you like to search again with different keywords?</p>';
-    ?>
+?>
 
 <?php get_search_form(); ?>
 
 <?php endif; ?>
 </main>
 
-<aside>
-this is index
-</aside>
+<?php get_sidebar(); ?>
+
 </div>
 <!-- END WRAPPER -->
 

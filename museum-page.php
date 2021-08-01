@@ -7,6 +7,10 @@ get_header();
 
 ?>
 
+<div id="hero"><img src="https://kellywithwordpress.design/wp-content/uploads/white_sands-e1627832885829.jpg" alt="banner">
+</div>
+<!-- end div hero -->
+
 <div id="wrapper">
 
 <main>
@@ -21,16 +25,16 @@ get_header();
 
 <?php while(have_posts()) : the_post() ; ?>
 
-<h2> <?php the_title() ;?></h2>
-
 <?php  the_content() ; ?> 
 
 <?php endwhile;  ?>
 
 </main>
 
-<aside>
-</aside>
+<aside id="secondary" class="widget-area">
+    <?php dynamic_sidebar( 'sidebar-museums' ); ?>
+</aside><!-- #secondary -->
+
     </div>
     <!-- END DIV/WRAPPER -->
 
