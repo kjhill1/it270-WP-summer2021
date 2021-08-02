@@ -4,11 +4,12 @@ get_header();
 ?>
 
 <div id="hero">
-<img src="https://kellywithwordpress.design/wp-content/uploads/DIscovery-Park-Dusk-e1627761529692.jpg" alt="banner">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/white_sands.jpg" alt="banner">
 </div>
 <!-- end div hero -->
 
-<div id="wrapper">
+<div class="wrapper">
+
 <?php if(has_post_thumbnail()) : ?>
 <?php the_post_thumbnail() ; ?>
 <?php endif; ?>

@@ -3,7 +3,11 @@ get_header();
 
 ?>
 
-<div id="wrapper">
+<div id="hero">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/gallery.JPG" alt="banner">
+</div>
+
+<div class="wrapper">
 <main>
 <!-- if we have posts...
 show me the post!!!

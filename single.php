@@ -2,19 +2,16 @@
 get_header();
 
 ?>
+<div id="hero">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/golden_gardens-1-e1627842307204.jpg" alt="banner">
+</div>
+
  <!-- this is mine after olga -->
 
-<!-- THIS IS OLGO's page. It is known as "news" in WP. Mine blog page was broken and we could not fix it. This has future code from videos. Watch videos to ensure that style and nav is right -->
 
-<div id="wrapper">
-<!-- <div class="thumbnail">
 
-<?php if(has_post_thumbnail()) : ?>
-<a href="<?php the_permalink(); ?>">
-<?php the_post_thumbnail(); ?></a>
-<?php endif;  ?>
-</div> -->
-<!-- end thumbnail -->
+ <div class="wrapper">
+
 <main>
 <!-- if we have posts...
 show me the post!!!
@@ -31,10 +28,9 @@ we do not have posts! -->
     <span><b>Posted By:</b> <?php the_author()  ;?></span>
     <span><b>Posted On:</b> <?php the_time('F j, Y g:i a')  ;?></span>
     </div>
-    </article> <!-- ???? article or c??? -->
-<!-- end meta div -->
-
-<?php the_content() ;  ?>
+    <!-- end meta div -->
+    <?php the_content() ;  ?>
+</article> <!-- ???? article or c??? -->
 
 <?php endwhile; ?>
 
@@ -46,13 +42,21 @@ we do not have posts! -->
 
 <?php endif; ?>
 
+<span class="next-previous">
+<?php (previous_post_link()) ? '%link' : ''; ?> &nbsp; &nbsp; <?php (next_post_link()) ? '%link' : ''; ?>
+</span>
+
 <?php comments_template(); ?>
+
+
 
 </main>
 
-<aside>
+<aside id="secondary" class="widget-area">
+    <?php dynamic_sidebar( 'sidebar-museums' ); ?>
+</aside><!-- #secondary -->
 
-</aside>
+
 </div>
 <!-- END WRAPPER div -->
 

@@ -20,6 +20,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+	
+}
+
+html {
+	border: solid 10px rgb(44, 41, 48);
 }
 
 body {
@@ -29,9 +34,9 @@ body {
 	}
 
 header {
-		/* height: 150px; */
-		/* margin: 9.5px; */
-		/* padding: 20px 20px; */
+		height: 150px; 
+		margin: 9.5px; 
+		padding: 20px 20px;
 		background-color: rgb(255, 202, 133);
 		position: fixed;
 		top: 0;
@@ -101,37 +106,6 @@ h3 {
     margin-bottom: 8px;
 }
 
-#wrapper {
-    max-width: 1100px;
-    margin: 25px;
-    clear: both;
-}
-
-main {
-    float: left;
-    width: 63%; 
-    /* margin-top: 20px; */
-}
-
-aside {
-
-    float: right;
-    width: 34%;
-    height: 400px;
-    margin-top: 100px;
-}
-
-.inner-header {
-    max-width: 1100px;
-    margin: 0px auto;
-}
-
-#logo {
-    float: left;
-    margin:25px;
-}
-
-
 .menu-my-primary-menu-container {
     float: right;
     margin: 25px 20px 0 0;
@@ -169,10 +143,146 @@ aside {
 	width: 175px;
 }
 
+#search-error {
+	max-width: 1100px;
+	margin: 150px auto 20px auto;
+
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 25px;
+    clear: both;
+}
+
+main {
+    float: left;
+    width: 63%; 
+    /* margin-top: 20px; */
+}
+
+aside {
+
+    float: right;
+    width: 34%;
+	padding-bottom: 10px;
+ 
+}
+
+#block-12 {
+	border-left: solid 2px rgb(176, 172, 182);
+	border-top: solid 2px rgb(176, 172, 182);
+	border-right: solid 2px rgb(176, 172, 182);
+	border-bottom: none;
+	background-color: rgb(245, 240, 235);
+	padding: 5%;
+}
+
+#block-7 {
+	border-left: solid 2px rgb(176, 172, 182);
+	border-bottom: none;
+	border-right: solid 2px rgb(176, 172, 182);
+	border-top: none;
+	background-color: rgb(245, 240, 235);
+	padding: 0 5% 0 5%;
+
+}
+
+#nav_menu-3 {
+	border-left: solid 2px rgb(176, 172, 182);
+	border-top: none;
+	border-right: solid 2px rgb(176, 172, 182);
+	border-bottom: solid 2px rgb(176, 172, 182);
+	background-color: rgb(245, 240, 235);
+	padding: 10px 0 10px 20px;
+	margin-top: -20px;
+
+}
+ 
+#block-13	{
+	padding: 5%;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu-my-museums-menu-container {
+	margin-left: 10px;
+
+}
+
+.menu-my-museums-menu-container li	{
+	line-height: 1.5;
+	list-style-type: none;
+	font-weight: bold;
+
+}
+
+.inner-header {
+    max-width: 1100px;
+    margin: 0px auto;
+}
+
+#logo {
+	float: left;
+    margin: 10px 0 0 -60px;
+    height: 100px;
+}
+
 
 
 #searchform {
 	float: right;
+}
+
+.home .size-post-thumbnail  {
+    width: 100%;
+   
+} 
+
+body .attachment-post-thumbnail {
+    width: 30%;
+    
+}
+
+.thumbnail {
+    margin-bottom: 10px;
+}
+
+.block-11-musuem {
+	clear: both;
+	background: #d5d9db;
+}
+
+#block-11 {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: center;
+}
+
+footer {
+    clear: both;
+    height: 200px;
+    background: rgb(253, 217, 169);
+    background-color: rgb(255, 202, 133);
+}
+
+.copyright {
+    clear: both;
+    height: 50px;
+    line-height: 50px;
+    background: rgb(251, 251, 142);
+}
+
+.copyright ul {
+    max-width: 1100px;
+    margin:0 auto;
+}
+
+.copyright li {
+    float: left;
+    margin-right: 30px;
+    list-style: none;
+    /* added to remove bullet */
 }
 
 .screen-reader-text {
@@ -222,10 +332,11 @@ margin-bottom: 20px;
 /* reply form*/
 
 #respond{
-    border: 2px dotted rgb(44, 41, 48);;
+    border: 2px dotted rgb(44, 41, 48);
     color: rgb(44, 41, 48);
     padding: 10px;
     margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .comment-notes + .comment-form-comment {
@@ -417,44 +528,5 @@ a {
 
 } /* End Mobile Styles */
 
-.home .size-post-thumbnail  {
-    width: 100%;
-   
-} 
 
-body .attachment-post-thumbnail {
-    width: 30%;
-    
-}
-
-.thumbnail {
-    margin-bottom: 10px;
-}
-
-
-footer {
-    clear: both;
-    height: 200px;
-    background: rgb(253, 217, 169);
-    background-color: rgb(255, 202, 133);
-}
-
-.copyright {
-    clear: both;
-    height: 50px;
-    line-height: 50px;
-    background: rgb(251, 251, 142);
-}
-
-.copyright ul {
-    max-width: 1100px;
-    margin:0 auto;
-}
-
-.copyright li {
-    float: left;
-    margin-right: 30px;
-    list-style: none;
-    /* added to remove bullet */
-}
 

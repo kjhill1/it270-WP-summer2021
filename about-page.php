@@ -1,14 +1,14 @@
 <?php 
 get_header();
 
-// Template Name: Museum Page will display home page
+// Template Name: About Page will display home page
 
 /* (by defining templ name this will display home page on index will refer to blog.)*/
 
 ?>
 
 <div id="hero">
-    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/white_sands.jpg" alt="banner">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/golden_gardens-1-e1627842307204.jpg" alt="banner">
 </div>
 <!-- end div hero -->
 
@@ -33,19 +33,11 @@ get_header();
 </main>
 
 <aside id="secondary" class="widget-area">
-    <?php dynamic_sidebar( 'sidebar-museums' ); ?>
+    <?php dynamic_sidebar( 'sidebar-about' ); ?>
 </aside><!-- #secondary -->
 
     </div>
     <!-- END DIV/WRAPPER -->
 
-<div class="block-11-musuem">
-<?php 
-dynamic_sidebar('sidebar-buy'); ?>
-
-</div>
-<!-- end block-9-museum div -->
-
-<?php get_footer(); 
-
+<? get_footer(); 
 ?>
