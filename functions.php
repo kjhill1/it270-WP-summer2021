@@ -16,7 +16,7 @@ register_nav_menus(array(
     'primary' => 'Primary Menu',
     'tours' => 'Museums Menu',
     'footer' => 'Footer Menu'
-    ));
+    )); 
 
 //Page Slug Body Class
 function add_slug_body_class( $classes ) {
@@ -79,18 +79,30 @@ function add_slug_body_class( $classes ) {
                 'after_title'   => '</h3>',
                 ) 
             );
-            
-            register_sidebar( 
-                array(
-                    'name'          => esc_html__( 'Sidebar Buy', 'site1' ),
-                    'id'            => 'sidebar-Buy',
-                    'description'   => esc_html__( 'Buy Widget.', 'site1' ),
-                    'before_widget' => '<section id="%1$s" class="widget %2$s">',
-                    'after_widget'  => '</section>',
-                    'before_title'  => '<h3 class="widget-title">',
-                    'after_title'   => '</h3>',
-                    ) 
-                );
+    
+    register_sidebar( 
+        array(
+            'name'          => esc_html__( 'Sidebar Buy', 'site1' ),
+            'id'            => 'sidebar-Buy',
+            'description'   => esc_html__( 'Buy Widget.', 'site1' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+            ) 
+        );
+
+        register_sidebar( 
+            array(
+                'name'          => esc_html__( 'Sidebar Footer Content', 'site1' ),
+                'id'            => 'sidebar-footer-content',
+                'description'   => esc_html__( 'Footer Content Widget.', 'site1' ),
+                'before_widget' => '<section id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</section>',
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+                ) 
+            );
     }
 
     add_action( 'widgets_init', 'site1_widgets_init' );
@@ -191,11 +203,11 @@ function specials() {
     
         
         case 'Friday':
-        $content = "Today\'s special is New York City! Let\'s add some information about the Metropolitan Opera! To learn more about our NEW York City Specials, click <a href=''>here</a>";
+        $content = "TGIF,, everything is special today, click <a href=''>here</a>";
         break;
     
         case 'Saturday':
-        $content = "Today\'s special is good old Yellowstone! Let\'s asd some information about Yellowstone! To learn more about Yellowstone Specials, click <a href=''>here</a>";
+        $content = "Cocktails as art!, click <a href=''>here</a>";
         break;
     }
     
@@ -203,11 +215,17 @@ function specials() {
     }
     
     add_shortcode('today_specials', 'specials');
- 
-add_shortcode('today_specails', 'specails');
 
 function today_date() {
     return date ("l\, F jS Y ");
 }
 
 add_shortcode('current_date', 'today_date');
+
+function year() {
+    return date('Y');
+}
+
+add_shortcode('current_year' , 'year' );
+
+remove_filter('the_content' , 'wp_autop');

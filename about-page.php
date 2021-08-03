@@ -8,7 +8,7 @@ get_header();
 ?>
 
 <div id="hero">
-    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/golden_gardens-1-e1627842307204.jpg" alt="banner">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/about_me.JPG" alt="banner">
 </div>
 <!-- end div hero -->
 

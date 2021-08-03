@@ -2,9 +2,6 @@
 get_header();
 
 ?>
-<div id="hero">
-    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/gallery.JPG" alt="banner">
-</div>
 
  <!-- this is mine after olga -->
 
