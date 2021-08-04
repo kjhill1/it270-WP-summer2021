@@ -84,7 +84,7 @@ function add_slug_body_class( $classes ) {
         array(
             'name'          => esc_html__( 'Sidebar Buy', 'site1' ),
             'id'            => 'sidebar-Buy',
-            'description'   => esc_html__( 'Buy Widget.', 'site1' ),
+            'description'   => esc_html__( 'About Widget.', 'site1' ),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
             'before_title'  => '<h3 class="widget-title">',
@@ -190,7 +190,7 @@ function specials() {
         break;
     
         case 'Tuesday':
-        $content = "Admit for the price of 2, click: <a href='#'>here</a>";
+        $content = "Admit  2 for the price of 1, click: <a href='#'>here</a>";
         break;
     
         case 'Wednesday':
