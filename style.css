@@ -270,6 +270,18 @@ body .attachment-post-thumbnail {
 	padding: 20px 0;
 	text-align: center;
 }
+.third 	{
+	/* 940 picel grid - 300x3 plus 2 gutter of 20px = 940pc */
+	width: 31.91%;
+	float: left;
+	margin-right: 2.12%;
+	
+}
+
+.third:last-of-type {
+	margin-right: 0;
+
+}
 
 footer {
     clear: both;
@@ -281,18 +293,6 @@ footer .wrapper {
 	background-color: rgb(255, 202, 133);
 }
 
-.third 	{
-	/* 940 picel grid - 300x3 plus 2 gutter of 20px = 940pc */
-	width: 31.91%;
-	float: left;
-	margin-right: 2.12%;
-	background:rgb(253, 140, 64);
-}
-
-.third:last-of-type {
-	margin-right: 0;
-
-}
 
 .copyright {
     clear: both;
@@ -348,11 +348,6 @@ margin-bottom: 20px;
     display: block;
 }
 
-blockquote {
-	font-size: 1.4em;
-	margin: 0 10% 20pc 10%;
-
-}
 
 .email-notes {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

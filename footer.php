@@ -9,6 +9,7 @@ dynamic_sidebar('sidebar-footer-content');?>
 		});
 		</script>
 
+
 <?php wp_footer(); ?>
 
 </body>
