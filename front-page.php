@@ -4,8 +4,10 @@ get_header();
 ?>
 
 <div id="hero">
-    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/golden_gardens.jpg" alt="banner">
-</div>
+
+<img src="https://kellywithwordpress.design/wp-content/uploads/golden_gardens-1-e1628011964739.jpg" alt="banner">
+
+    </div>
 <!-- end div hero -->
 
 <div class="wrapper">
