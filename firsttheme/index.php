@@ -3,7 +3,11 @@ get_header();
 
 ?>
 
-<div id="wrapper">
+<div id="hero">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/golden_gardens-1-e1628011964739.jpg" alt="banner">
+</div>
+
+<div class="wrapper">
 <main>
 <!-- if we have posts...
 show me the post!!!
@@ -26,8 +30,8 @@ we do not have posts! -->
 <div class="thumbnail">
 
 <?php if(has_post_thumbnail()) : ?>
-<a href="<?php the_permalink(); ?>">
-<?php the_post_thumbnail(); ?></a>
+
+<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 <?php endif;  ?>
 </div>
 <!-- end thumbnail -->
@@ -48,7 +52,7 @@ we do not have posts! -->
 <?php echo '<h2>Search Results: </h2>
 <p>Oh No! Wammy! Nothing Here. <br>
 Would you like to search again with different keywords?</p>';
-    ?>
+?>
 
 <?php get_search_form(); ?>
 
@@ -57,11 +61,9 @@ Would you like to search again with different keywords?</p>';
 
 <?php get_sidebar(); ?>
 
-<!-- <aside>
-this is index
-</aside> -->
 </div>
 <!-- END WRAPPER -->
+
 
 <?php 
 get_footer();

@@ -20,71 +20,127 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+	
 }
+
+/* html {
+	border: solid 10px rgb(44, 41, 48);
+} */
 
 body {
     background-color: rgb(248, 247, 245);;
-    border: solid 10px rgb(44, 41, 48);
-}
+    /* border: solid 10px rgb(44, 41, 48); */
+	padding-top: 50px; 
+	}
 
 header {
-    padding: 20px 0;
-    background-color: rgb(255, 202, 133);
+	height: 150px;
+	margin: auto;
+	padding: 20px 20px;
+	background-color: rgb(255, 202, 133);
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	}
+
+
+.inner-header {
+	max-width: 1100px;
+	margin: 0px auto;
+}
+
+#logo {
+	float: left;
+	height: 100px;
+}
+
+.home #hero {
+	background-image:url(https://kellywithwordpress.design/wp-content/uploads/golden_gardens-1-e1628011964739.jpg);
+	background-attachment:fixed;
+	background-size:100%;
+	background-position:0 150px;
+	min-height:600px;
+	max-width:100%;
+	background-repeat:no-repeat;
+}
+
+.home #hero img {
+	display: none;
+}
+
+.inner-page #hero {
+	background-image:url(https://kellywithwordpress.design/wp-content/uploads/gallery-1.jpg);
+	background-attachment:fixed;
+	background-size:100%;
+	background-position:0 150px;
+	min-height:500px;
+	max-width:100%;
+	background-repeat:no-repeat;
+}
+
+.inner-page #hero img {
+		display: block;
+	}
+
+
+/* TOP SEARCH FORM */
+#top {
+	float: right;
+    margin-right: 50px;
+	background-color:rgb(44, 41, 48);
+	height: 60px;
+	line-height: 60px;
+	padding: 0 20px;
+}
+  
+  #top #searchform {
+	float: right;
+  }
+  
+  .screen-reader-text {
+	display: none;
+  }
+  
+  #top input#s {
+	height: 30px;
+	font-size: 14px;
+  }
+  
+  #top input#searchsubmit {
+	padding: 4px;
+	background-color: antiquewhite;
+
+  }
+/* END TOP SEARCH FORM   */
+
+.home h1{
+	text-align: center;
 }
 
 h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 3em;
-    font: rgb(61, 61, 61);
+	font: 1.5em;
+    color: rgb(17, 16, 16);
+    margin-bottom: 8px;
+	padding-top: 20px;
 }
 
 h1 a {
     color: rgb(17, 16, 16);
+
 }
 
 h2  {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2em;
+    font-size: 1em;
     color: rgb(173, 102, 35)
 }
 
 h3 {
-    font: 1.5em;
+    font: .5em;
     color: rgb(17, 16, 16);
     margin-bottom: 8px;
 }
-
-#wrapper {
-    max-width: 1100px;
-    margin: 25px;
-    clear: both;
-}
-
-main {
-    float: left;
-    width: 63%; 
-    margin-top: 20px;
-}
-
-aside {
-
-    float: right;
-    width: 34%;
-    height: 400px;
-    margin-top: 20px;
-    background: rgb(195, 148, 255);
-}
-
-.inner-header {
-    max-width: 1100px;
-    margin: 0px auto;
-}
-
-#logo {
-    float: left;
-    margin:25px;
-}
-
 
 .menu-my-primary-menu-container {
     float: right;
@@ -107,7 +163,7 @@ aside {
     display: block;
     position: absolute;
     /* subtitle will be to left unless tell the parent to be relative here it is.main-navigation li*/
-    top:17px;
+    top: 17px;
     left:0;
     padding: 6px;
     background-color: antiquewhite;
@@ -120,18 +176,189 @@ aside {
 
 .main-navigation li:hover .sub-menu li {
     margin-left:0;
+	width: 175px;
 }
 
-#top {
-	/* float: right;
-    margin-right: 50px; */
-	background-color:rgb(44, 41, 48);
-	height: 60px;
-	line-height: 60px;
-	padding: 0 20px;
+#search-error {
+	max-width: 1100px;
+	margin: 150px auto 20px auto;
+
 }
+
+.wrapper {
+    max-width: 1100px;
+    /* margin: 25px; */
+    clear: both;
+	margin:0 auto;
+}
+
+main {
+    float: left;
+    width: 63%; 
+    /* margin-top: 20px; */
+}
+
+blockquote {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 1.7em;
+	font-style: italic;
+	margin: 0 10% 20px 10%;
+	line-height: 1.2;
+	text-align: center;
+  }
+
+aside {
+	float: right;
+	width: 34%;
+	padding: 20px;
+}
+ 
+
+#block-12 {
+	border-left: solid 2px rgb(176, 172, 182);
+	border-top: solid 2px rgb(176, 172, 182);
+	border-right: solid 2px rgb(176, 172, 182);
+	border-bottom: none;
+	background-color: rgb(245, 240, 235);
+	padding: 5%;
+}
+
+#custom_html-3 {
+
+	border: solid 2px rgb(176, 172, 182);
+	/* border-bottom: solid 2px rgb(176, 172, 182;
+	border-right: solid 2px rgb(176, 172, 182);
+	border-top: solid 2px rgb(176, 172, 182); */
+	background-color: rgb(245, 240, 235);
+	padding: 5% 5%;
+
+}
+
+/* my musems box */
+
+#nav_menu-2 {
+	border-left: solid 2px rgb(176, 172, 182);
+	border-top: none;
+	border-right: solid 2px rgb(176, 172, 182);
+	border-bottom: solid 2px rgb(176, 172, 182);
+	background-color: rgb(245, 240, 235);
+	padding: 10px 0 10px 20px;
+	margin-top: -20px;
+
+}
+ 
+#text-2	{
+	margin-top: 5px;
+	padding: 5%;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	border: solid 5px rgb(253, 140, 64);
+}
+/* what's showing menu */
+
+.menu-my-museums-menu-container {
+	margin-left: 10px;
+
+}
+
+.menu-my-museums-menu-container li	{
+	line-height: 1.5;
+	list-style-type: none;
+	font-weight: bold;
+
+}
+
+
 #searchform {
 	float: right;
+}
+
+.home .size-post-thumbnail  {
+    width: 100%;
+   
+} 
+
+body .attachment-post-thumbnail {
+    width: 30%;
+}
+
+.thumbnail {
+    margin-bottom: 10px;
+}
+
+/* .block-12-musuem  */
+
+.buy-now
+	{
+	clear: both;
+	background: #808588;
+}
+
+#custom_html-5 {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: center;
+}
+
+#block-12 {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: center;
+}
+.third 	{
+	/* 940 picel grid - 300x3 plus 2 gutter of 20px = 940pc */
+	width: 31.91%;
+	float: left;
+	margin-right: 2.12%;
+	
+}
+
+.third:last-of-type {
+	margin-right: 0;
+
+}
+
+.col8 {
+	width: 48.9%;
+	float: left;
+	text-align: center;
+	}
+
+.col8:last-of-type {
+	float: right;
+}
+footer {
+    clear: both;
+	padding-top: 20px;
+    background-color: rgb(255, 202, 133);
+}
+
+footer .wrapper {
+	background-color: rgb(255, 202, 133);
+}
+footer .row {
+	text-align:center;
+}
+
+
+.copyright {
+    clear: both;
+    /* height: 50px; */
+    line-height: 50px;
+    background: rgb(251, 251, 142);
+}
+
+.copyright ul {
+    max-width: 1100px;
+    margin:0 auto;
+}
+
+.copyright li {
+    float: left;
+    margin-right: 30px;
+    list-style: none;
+    /* added to remove bullet */
 }
 
 .screen-reader-text {
@@ -169,6 +396,7 @@ margin-bottom: 20px;
     display: block;
 }
 
+
 .email-notes {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -181,20 +409,105 @@ margin-bottom: 20px;
 /* reply form*/
 
 #respond{
-    border: 2px dotted rgb(44, 41, 48);;
+    border: 2px dotted rgb(44, 41, 48);
     color: rgb(44, 41, 48);
     padding: 10px;
     margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .comment-notes + .comment-form-comment {
         margin: -14px 0 20px 0;
 }
 
+/* next-previous {
+	display: block;
+	margin-bottom: 10px;
+	font-style: italic;
+	font-weight: bold;
+	color: rgb(44, 41, 48);
+	font-size: 1.1em;
+}
+next-previous a {
+	color: rgb(44, 41, 48);
+	
+} */
+
 p + .block {
 
     margin: -10px 0 20px 0;
     font-style: italic;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+.big-font {
+	font-size: 1.2em;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.row {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+/* CONTACT FORM  */
+
+.page-contact-us .wpforms-container{
+	max-width: 800px;
+    margin: 0 auto;
+	padding: 0 0 25px 0;
+  }
+  
+  #wpforms-form-198  #wpforms-form-199 {
+	border: solid 5px rgb(44, 41, 48);
+	padding: 3%;
+	margin-top: 15px;
+  }
+
+  .page-contact-us h1 {
+	text-align: center;
+
+}
+  
+
+  /* END CONTACT FORM */
+  
+
+#categories-2 {
+	padding-top: 10px;
+}
+
+.posts {
+	font-family: Verdana, Geneva, Tahoma, sans-seri; 
+	color:rgb(44, 41, 48);
+	padding: 5px;
+}
+
+.search .posts {
+	width: 63%;
+	
+}
+/* individual findings in search page container for pic and blurb */
+
+.category .page-title {
+	margin-bottom: 10px;
+}
+ #menu-favorite-hotels li{
+	list-style-type: none;
+	line-height: 1.5em;
+}
+
+#nav_menu-3 {
+	margin: 5px;
+	border: 2px dotted rgb(44, 41, 48);
+	padding: 10px;
+}
+
+.widget-area li {
+	list-style-type: none;
 }
 
 a {
@@ -203,26 +516,212 @@ a {
 
 .meta{
     margin-bottom: 10px;
+	padding-bottom: 10px;
 }
 
+/* Hide the Navigation Button by default */
+.nav-button {
+	display: none;
+  }
+  
 
-.nav-button { 
-	display: none; 
-} /* hide the navigation button by default */
+   /* +++++++ START Mobile Styles ++++++++ */
+  /* ++++++ MEDIA QUERIES +++++++++ */
+  
+  @media screen and (max-width: 1430px) {
 
-@media only screen and (max-width: 700px) {
+
+	.home #hero {
+	  background-image: none;
+	  margin-top: 150px;
+	  max-width: 100%;
+	  min-height: auto;
+	}
+  
+	.home #hero img {
+	  display: block;
+	}
+  
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.inner-page #hero {
+	  background-image: none;
+	  /* margin-top: 150px; */
+	  min-height: auto;
+	  max-width: 100%;
+	  
+	}
+  
+	.inner-page #hero img {
+	  display: block;
+	}
+  }
+  
+  @media screen and (max-width: 1140px) {
+	body {
+	  font-size: 98%;
+	}
+  
+	.wrapper {
+	  margin: 20px 30px; 
+
+	}
+  
+	.inner-header {
+	  margin: 0 30px;
+	}
+  }
+  
+  @media screen and (max-width: 1000px) {
+	body {
+	  font-size: 96%;
+	}
+	.wrapper {
+		margin: 20px 30px;
+	  }
+	}
+  
+  
+  @media screen and (max-width: 800px) {
+	body {
+	  font-size: 94%;
+	}
+  
+	.wrapper {
+	  margin: 20px 15px;
+	}
+  
+	.inner-header {
+	  margin: 0 15px;
+	}
+ 
+	blockquote {
+	  font-size: 1.4em;
+	  margin: 0 2% 20px;
+	  line-height: 1.1;
+	}
+
+	.big-font {
+		font-size: 1.1em;
+		margin: 0 2% 20px;
+	  }
+  
+	.home h1 {
+	  font-size: 2.2em;
+	}
+  
+
+	/* Based on 940 px grid: 300 x 3 + 2 gutters of 20px = 940px */
+	.third {
+	  width: auto;
+	  float: none;
+	  margin-right: 0;
+	}
+  }
+
+  @media only screen and (max-width: 700px) {
+  
+
+	/* body {
+		background-color: rgb(194, 188, 97);
+	} */
+
+	header {
+		height: auto;
+		padding: 20px 20px;
+		position: static;
+		background: none;
+	}
+	
+	#logo {
+		float: none !important;
+		margin: 20px auto !important;
+	  }
+
+
+	.inner-page #hero, .home #hero {
+	  margin-top: 0;
+	  width: auto;
+	}
+
+	.inner-page #hero {
+		background-image: none;
+		/* margin-top: 150px; */
+		min-height: auto;
+		max-width: 100%;
+		
+	  }
+	#top {
+	  background: none;
+	  height: auto;
+	  line-height: inherit;
+	  padding: 0;
+	}
+  
+	#top #searchform {
+	  float: none;
+	  position: fixed;
+	  top: 10px;
+	  right: 15px;
+	  z-index: 10000;
+	}
+  
+	/* header {
+	  height: auto;
+	  position: static;
+	  background: none;
+	  width: auto;
+	  background-color: rgb(255, 202, 133);
+	} */
+  
+  
+	.col8 {
+	  width: auto;
+	  float: none;
+	}
+  
+	.col8:last-of-type {
+	  float: none;
+	}
+  
+	main {
+	  float: none;
+	  width: auto;
+	}
+  
+	aside {
+	  float: none;
+	  width: auto;
+	}
+	 
+	.wrapper {
+		margin: 20px 50px;
+	}
+
+	.inner-header {
+		margin: 0 15px;
+	}
+  }
+
+	/* ATSTUTEO NAV CODE */
+
+@media only screen and (max-width: 650px) {
 
 	/* Navigation Button
 	-------------------------------------------------------- */
 
 	.nav-button {
 		display: block;
-		position: absolute;
+		position: fixed;
 		top: 7px;
 		left: 7px;
 		width: 50px;
 		height: 35px;
-		background: url('images/menu-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background: url('../images/menu-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 21px, 100%;
@@ -238,7 +737,7 @@ a {
 		background-color: rgba(0,0,0,.1);
 	}
 	.nav-button.open {
-		background: url('images/close-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background: url('../images/close-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 21px, 100%;
@@ -252,15 +751,15 @@ a {
 	.primary-nav {
 		width: 100%;
 		float: none;
-		background-color: #238be3; /* change the menu color */
-		background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background-color: rgb(255, 202, 133);; /* change the menu color */
+		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 2), rgb(250, 228, 199));
 		display: block;
 		height: 50px;
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
 		box-shadow: 0 1px 2px rgba(0,0,0,.6);
-		position: absolute;
+		position: fixed;
 		top: 0px;
 		left: 0px;
 		z-index: 998;
@@ -272,19 +771,22 @@ a {
 		font-family: Arial;
 	}
 
-    .main-navigation li {
-        margin-left:0px;
-    }
 
-    .main-navigation li:hover .sub-menu {
 
-        display: block;
-        position: static;
-        /* if not set to static the nav menu's drop (Banksy) with be on top of the "museum" button; */
-        top:0;
-        padding: 0;
-        background-color: none;
-    }
+	.main-navigation li {
+		margin-left: 0;
+	  }
+	
+	  .main-navigation li:hover .sub-menu {
+		position: static;
+		top: 0;
+		padding: 0;
+		background: none;
+	  }
+	
+	  .main-navigation li:hover .sub-menu li {
+		width: 100%;
+	  }
 
 	.primary-nav li a {
 		display: block;
@@ -293,7 +795,7 @@ a {
 		font-size: 14px;
 		font-weight: bold;
 		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
-		color: white;
+		color: rgb(41, 41, 40);
 		text-decoration: none;
 		border-bottom: 1px solid rgba(0,0,0,.2);
 		border-top: 1px solid rgba(255,255,255,.1);
@@ -347,49 +849,5 @@ a {
 		border-top: 0 none;
 	}
 
-} /* End Mobile Styles */
-
-.home .size-post-thumbnail  {
-    width: 25%;
-    height: 50%;
-   
-} 
-
-body .attachment-post-thumbnail {
-    width: 30%;
-    
+/* End Mobile Styles */
 }
-
-.thumbnail {
-    margin-bottom: 10px;
-}
-
-
-
-
-footer {
-    clear: both;
-    height: 200px;
-    background: rgb(253, 217, 169);
-    background-color: rgb(255, 202, 133);
-}
-
-.copyright {
-    clear: both;
-    height: 50px;
-    line-height: 50px;
-    background: rgb(251, 251, 142);
-}
-
-.copyright ul {
-    max-width: 1100px;
-    margin:0 auto;
-}
-
-.copyright li {
-    float: left;
-    margin-right: 30px;
-    list-style: none;
-    /* added to remove bullet */
-}
-

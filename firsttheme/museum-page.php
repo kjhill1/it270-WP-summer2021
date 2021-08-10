@@ -7,7 +7,20 @@ get_header();
 
 ?>
 
-<div id="wrapper">
+<div id="hero">
+
+<img src="<?php echo get_template_directory_uri(); ?>/../../uploads/golden_gardens-1-e1628011964739.jpg" alt="banner">
+
+    </div>
+<div id="hero">
+
+<img src="https://kellywithwordpress.design/wp-content/uploads/gallery-1.jpg" alt="banner">
+
+</div>
+
+<!-- end div hero -->
+
+<div class="wrapper">
 
 <main>
 
@@ -21,8 +34,6 @@ get_header();
 
 <?php while(have_posts()) : the_post() ; ?>
 
-<h2> <?php the_title() ;?></h2>
-
 <?php  the_content() ; ?> 
 
 <?php endwhile;  ?>
@@ -31,10 +42,18 @@ get_header();
 
 <aside id="secondary" class="widget-area">
     <?php dynamic_sidebar( 'sidebar-museums' ); ?>
-</aside><!-- #secondary -->
+</aside>
 
     </div>
     <!-- END DIV/WRAPPER -->
 
-<? get_footer(); 
+<div class="buy-now">
+<?php 
+dynamic_sidebar('sidebar-buy'); ?>
+
+</div>
+<!-- end buy-now div -->
+
+<?php get_footer(); 
+
 ?>
