@@ -1,45 +1,24 @@
 <!DOCTYPE html>
-<html <?php language_attributes() ;?> >
+<html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ) ;?>">
-<title><?php bloginfo( 'name' ); ?></title>
-<link href="<?php bloginfo( 'stylesheet_url' ); ?>" rel="stylesheet" type="text/css">
-<?php wp_head();  ?>
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width" />
+<?php wp_head(); ?>
 </head>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<header id="header" role="banner">
+<div id="branding">
 
-<body <?php body_class(! is_front_page() ? "inner-page" : "" ); ?>>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo('name' ) ); ?>" rel="home"><img id="logo" src="http://localhost/company/wp-content/uploads/Screen-Shot-2021-08-11-at-2.06.37-PM.png" alt="logo"></a>
 
-<header>
-
-<div id="top">
-    
-<?php get_search_form (); ?>
 </div>
-<!-- end div top -->
-
-
-<div class="inner-header">
-
-<a href="<?php echo get_home_url(); ?> ">
-
-<img src="<?php echo get_template_directory_uri(); ?>/../../uploads/logo.png" id="logo" alt="Logo">
-</a>
-
-
-<nav id="site-navigation" class="main-navigation">
-<button class="nav-button">Toggle Navigation</button>
-
-<?php
-
-$args_primary = array(
-'theme_location' => 'primary', 'items_wrap' => '<ul class="primary-nav">%3$s</ul>');
-?>
-
-
-<?php wp_nav_menu($args_primary); ?>
-
+<div id="site-description"<?php if ( !is_single() ) { echo ' itemprop="description"'; } ?>><?php bloginfo( 'description' ); ?></div>
+</div>
+<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
+<!-- <div id="search"><?php get_search_form(); ?></div> -->
 </nav>
-</div>
-<!-- closes inner header div -->
-
-    </header>
+</header>
+<div id="wrapper" class="hfeed">
+<div id="container">
