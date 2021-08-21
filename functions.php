@@ -345,27 +345,27 @@ function kale_wp_page_menu_class( $class ) {
 add_filter( 'wp_page_menu', 'kale_wp_page_menu_class' );
 
 #get_the_archive_title
-// function kale_archive_title( $title ) {
-//     if( is_home() && get_option('page_for_posts') ) {
-//         $title = get_page( get_option('page_for_posts') )->post_title;
-//     }
-//     else if( is_home() ) {
-//         $title = kale_get_option('kale_blog_feed_label');
-//         $title = esc_html($title);
-//     }
-//     else if ( is_search() ) {
-//         $title = esc_html__('Search Results: ', 'kale') . get_search_query();
-//     }
-//     return $title;
-// }
-// add_filter( 'get_the_archive_title', 'kale_archive_title' );
+function kale_archive_title( $title ) {
+    if( is_home() && get_option('page_for_posts') ) {
+        $title = get_page( get_option('page_for_posts') )->post_title;
+    }
+    else if( is_home() ) {
+        $title = kale_get_option('kale_blog_feed_label');
+        $title = esc_html($title);
+    }
+    else if ( is_search() ) {
+        $title = esc_html__('Search Results: ', 'kale') . get_search_query();
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'kale_archive_title' );
 
 //https://productforums.google.com/forum/#!topic/webmasters/WUszeNYGNdg
 # Remove the "hentry" class from pages and archives (prevents structured data errors)
-// function remove_hentry( $classes ) {
-//     if (is_page() || is_archive()){$classes = array_diff( $classes, array('hentry'));}return $classes;
-// }
-// add_filter( 'post_class','remove_hentry' );
+function remove_hentry( $classes ) {
+    if (is_page() || is_archive()){$classes = array_diff( $classes, array('hentry'));}return $classes;
+}
+add_filter( 'post_class','remove_hentry' );
 
 /*------------------------------
  Top Navigation
@@ -529,66 +529,3 @@ function kale_pagination($default_wp_function = null, $args = [], $default = nul
         }
     }
 }
-function site1_widgets_init() {
-    register_sidebar( 
-    array(
-        'name'          => esc_html__( 'Sidebar Blog', 'site1' ),
-        'id'            => 'sidebar-blog',
-        'description'   => esc_html__( 'Blog Widget.', 'site1' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-        ) 
-    );
-
-register_sidebar( 
-    array(
-        'name'          => esc_html__( 'Sidebar Museums', 'site1' ),
-        'id'            => 'sidebar-museums',
-        'description'   => esc_html__( 'Museums Widget.', 'site1' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-        ) 
-    );
-
-    register_sidebar( 
-        array(
-            'name'          => esc_html__( 'Sidebar About', 'site1' ),
-            'id'            => 'sidebar-about',
-            'description'   => esc_html__( 'About Widget.', 'site1' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h3 class="widget-title">',
-            'after_title'   => '</h3>',
-            ) 
-        );
-
-register_sidebar( 
-    array(
-        'name'          => esc_html__( 'Sidebar Buy', 'site1' ),
-        'id'            => 'sidebar-Buy',
-        'description'   => esc_html__( 'About Widget.', 'site1' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-        ) 
-    );
-
-    register_sidebar( 
-        array(
-            'name'          => esc_html__( 'Sidebar Footer Content', 'site1' ),
-            'id'            => 'sidebar-footer-content',
-            'description'   => esc_html__( 'Footer Content Widget.', 'site1' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h3 class="widget-title">',
-            'after_title'   => '</h3>',
-            ) 
-        );
-}
-
-add_action( 'widgets_init', 'site1_widgets_init' );
