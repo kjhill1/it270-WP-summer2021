@@ -89,7 +89,7 @@ $kale_posts_posts_nav_show = kale_get_option('kale_posts_posts_nav_show');
     <!-- /Main Column -->
     
     
-    <?php if($kale_posts_sidebar == 1)  get_sidebar();  ?>
+  
     
 </div>
 <!-- /Two Columns -->
