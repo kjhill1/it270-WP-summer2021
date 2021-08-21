@@ -1,3 +1,4 @@
+this is from the side bar page
 <?php
 /**
  * Sidebar
@@ -19,7 +20,13 @@ $kale_example_content = kale_get_option('kale_example_content');
     else if($kale_example_content == 1) { kale_example_sidebar(); } 
     ?>
 
+<?php 
 
+if(is_active_sidebar('sidebar-blog')) { ?><div class="sidebar-project-1"><?php dynamic_sidebar('sidebar-blog'); ?></div><?php } 
+
+if(is_active_sidebar('sidebar-blog')) { ?><div class="sidebar-default sidebar-block sidebar-no-borders"><?php dynamic_sidebar('sidebar-blog'); ?></div><?php } 
+
+?>
 <?php 
 
 if(is_active_sidebar('sidebar-about')) { ?><div class="sidebar-about"><?php dynamic_sidebar('sidebar-about'); ?></div><?php } 
@@ -77,4 +84,5 @@ if(is_active_sidebar('sidebar-project-3')) { ?><div class="sidebar-project-1"><?
 if(is_active_sidebar('sidebar-project-3')) { ?><div class="sidebar-default sidebar-block sidebar-no-borders"><?php dynamic_sidebar('sidebar-project-3'); ?></div><?php } 
 
 ?>
-<!-- /Sidebar -->
+
+</aside>

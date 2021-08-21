@@ -10,8 +10,7 @@
 function kale_widgets_init() {
 
     /* Sidebar Widgets */
-
-    register_sidebar( array(
+	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar - Default', 'kale' ),
 		'id'            => 'sidebar-default',
 		'before_widget' => '<div id="%1$s" class="default-widget widget %2$s">',
@@ -29,17 +28,17 @@ function kale_widgets_init() {
 		'after_title'   => '</span></h3>',
 	) );
 
-    /* Header Widgets */
+    // /* Header Widgets */
 
-	// register_sidebar( array(
-	// 	'name'          => esc_html__( 'Header - Left', 'kale' ),
-	// 	'id'            => 'header-row-1-left',
-	// 	'description'   => esc_html__( 'Add widgets here to appear in the top left area.', 'kale' ),
-	// 	'before_widget' => '<div id="%1$s" class="header-widget widget %2$s">',
-	// 	'after_widget'  => '</div>',
-	// 	'before_title'  => '<h3 class="screen-reader-text">',
-	// 	'after_title'   => '</h3>',
-	// ) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Header - Left', 'kale' ),
+		'id'            => 'header-row-1-left',
+		'description'   => esc_html__( 'Add widgets here to appear in the top left area.', 'kale' ),
+		'before_widget' => '<div id="%1$s" class="header-widget widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="screen-reader-text">',
+		'after_title'   => '</h3>',
+	) );
     register_sidebar( array(
 		'name'          => esc_html__( 'Header - Right', 'kale' ),
 		'id'            => 'header-row-1-right',
@@ -101,8 +100,18 @@ function kale_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
-    register_sidebar( 
-		array(
+
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Blog', 'final_site' ),
+		'id'            => 'sidebar-Blog',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+		) 
+	);
+	register_sidebar( array(
 			'name'          => esc_html__( 'Sidebar About', 'final_site' ),
 			'id'            => 'sidebar-about',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
