@@ -1,7 +1,6 @@
 <?php
 /**
- * Template Name: About Page
- *
+ * Template Name: Project #3 Page
  * @package kale
  */
 ?>
@@ -87,22 +86,15 @@ if($kale_pages_featured_image_show == 'Banner' && has_post_thumbnail() && $kale_
 
     </div>
     <!-- /Main Column -->
-
-    <div class="sidebar-about">
+    <div class="sidebar-designs">
     <aside id="secondary" class="widget-area">
-    <?php dynamic_sidebar( 'sidebar-about' ); ?>
-</aside>
+    <?php dynamic_sidebar( 'sidebar-project-3' ); ?>
+</aside>  
 
-        </div>
- 
-    <?php if($kale_pages_sidebar == 1)  get_sidebar(sidebar-about);  ?>
 </div>
 <!-- /Two Columns -->
 
 <?php endwhile; ?>
 <hr />
 
-    
-
 <?php get_footer(); ?>
-

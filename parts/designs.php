@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for FRONT PAGE 
+ * Template Name: Designs Page
  *
  * @package kale
  */
@@ -32,6 +32,14 @@ if($kale_pages_featured_image_show == 'Banner' && has_post_thumbnail() && $kale_
 
 <!-- Two Columns -->
 <div class="row two-columns">
+
+    <!-- Main Column -->
+    <?php if($kale_pages_sidebar == 1) { ?>
+    <div class="main-column <?php if($kale_sidebar_size == 0) { ?> col-md-8 <?php } else { ?> col-md-9 <?php } ?>" role="main">
+    <?php } else { ?>
+    <div class="main-column col-md-12" role="main">
+    <?php } ?>
+
     
         <!-- Page Content -->
         <div id="page-<?php the_ID(); ?>" <?php post_class('entry entry-page'); ?>>
@@ -42,10 +50,18 @@ if($kale_pages_featured_image_show == 'Banner' && has_post_thumbnail() && $kale_
 
 
             <div class="page-content"><?php the_content(); ?></div>
-            
+
+            <div class="row two-columns">
         
     </div>
-        <!-- END Page Content -->
+
+        </div>
+        <!-- ENDPage Content -->
+
+        <div class="sidebar-designs">
+    <aside id="secondary" class="widget-area">
+    <?php dynamic_sidebar( 'sidebar-designs' ); ?>
+</aside>  
 
 
             </div>
@@ -58,3 +74,4 @@ if($kale_pages_featured_image_show == 'Banner' && has_post_thumbnail() && $kale_
 <hr />
 
 <?php get_footer(); ?>
+

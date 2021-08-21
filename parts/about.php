@@ -91,11 +91,10 @@ if($kale_pages_featured_image_show == 'Banner' && has_post_thumbnail() && $kale_
     <div class="sidebar-about">
     <aside id="secondary" class="widget-area">
     <?php dynamic_sidebar( 'sidebar-about' ); ?>
-</aside>
+</aside>    
 
         </div>
  
-    <?php if($kale_pages_sidebar == 1)  get_sidebar(sidebar-about);  ?>
 </div>
 <!-- /Two Columns -->
 

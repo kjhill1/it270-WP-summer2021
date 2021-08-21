@@ -1,28 +1,32 @@
 <?php
-get_header();
-
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ * @package kale  
+ *
+ */
 ?>
-<div id="search-error">
-    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/404-1.jpg" alt="404">
+<?php get_header(); ?>
+
+<!-- Two Columns -->
+<div class="row two-columns">
+    <!-- Main Column -->
+    <div class="main-column col-md-12" role="main">
+        
+        <!-- Page Content -->
+        <div class="error-404">
+            <h1 class="entry-title"><?php _e('404', 'kale'); ?></h1>
+            <p><?php _e('Page Not Found', 'kale'); ?></p>
+        </div>
+        <!-- /Page Content -->
+        
+    </div>
+    <!-- /Main Column -->
+
+
 </div>
+<!-- /Two Columns -->
 
-<div class="wrapper">
-<main>
-<h2><?php _e( 'This is somewhat embarrassing, isn’t it?', 'site' ); ?></h2>
-    <p><?php _e( 'It looks like nothing was found at this location. Maybe try another search?', 'site1' ); ?></p>
-<?php get_search_form(); ?>
-    <h3>Please feel free to browse...</h3>
-<?php wp_list_pages(); ?>
+<hr />
 
-</main>
-
-<aside>
-Someone is Slacking. Here is my 404 page!
-</aside>
-</div>
-<!-- END WRAPPER -->
-
-<?php 
-get_footer();
-
-?>
+<?php get_footer(); ?>
